@@ -1,0 +1,25 @@
+import random
+
+def numara_tahmin_oyunu():
+    print("Numara Tahmin Oyununa Hoş Geldiniz!")
+    print("1 ile 100 arasında bir sayıyı tahmin edin.")
+
+    # Bilgisayar rastgele bir sayı seçer
+    hedef_sayı = random.randint(1, 100)
+    
+    tahmin_sayısı = 0
+
+    while True:
+        tahmin = int(input("Tahmininizi girin: "))
+        tahmin_sayısı += 1
+
+        if tahmin < hedef_sayı:
+            print("Daha büyük bir sayı girin.")
+        elif tahmin > hedef_sayı:
+            print("Daha küçük bir sayı girin.")
+        else:
+            print(f"Tebrikler! {tahmin} doğru! {tahmin_sayısı} tahminde bulundunuz.")
+            break
+
+if __name__ == "__main__":
+    numara_tahmin_oyunu()
